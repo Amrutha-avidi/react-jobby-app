@@ -1,0 +1,29 @@
+.home-con {
+  height: 88vh;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
+  background-size: cover;
+  color: white;
+  padding: 30px;
+  margin-top: 0px;
+}
+@media screen and (min-width: 768px) {
+  .home-con {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+  }
+  h1 {
+    font-size: 65px;
+    width: 630px;
+    padding-left: 30px;
+  }
+  p {
+    font-size: 30px;
+    width: 630px;
+    padding-left: 30px;
+  }
+  button {
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    margin-left: 30px;
+  }
+}

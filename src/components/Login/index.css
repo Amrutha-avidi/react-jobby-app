@@ -1,0 +1,76 @@
+.main-bg {
+  background-color: #121212;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-bg {
+  background-color: #272727;
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  color: #f8fafc;
+  width: 300px;
+  height: 300px;
+}
+@media screen and (min-width: 768px) {
+  .form-bg {
+    width: 480px;
+    height: 430px;
+    padding: 70px;
+  }
+}
+button {
+  color: #f8fafc;
+  background-color: #6366f1;
+  border-radius: 5px;
+  border-width: 0px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.label-con {
+  font-family: roboto;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.input-con {
+  border-radius: 5px;
+  width: 200px;
+  height: 25px;
+  padding: 10px;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: #b6c5ff;
+  border-style: solid;
+  color: #f8fafc;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .input-con {
+    width: 340px;
+    height: 30px;
+  }
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 40px;
+  width: 100px;
+  height: 30px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 150px;
+    height: 50px;
+  }
+}
+.error-msg {
+  color: #ff0b37;
+}

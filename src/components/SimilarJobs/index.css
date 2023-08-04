@@ -1,0 +1,45 @@
+li {
+  list-style: none;
+  background-color: #272727;
+  border-radius: 20px;
+  width: 300px;
+  margin-right: 40px;
+  padding: 20px;
+}
+.company-logo {
+  width: 55px;
+  height: 55px;
+}
+.rating-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title {
+  font-size: 20px;
+}
+.star-icon {
+  font-size: 15px;
+}
+.rating {
+  font-size: 15px;
+}
+.sub-head {
+  font-size: 20px;
+}
+.location-employment-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.similar-employment-container {
+  width: 900px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.similar-employment-container {
+  font-size: 15px;
+}

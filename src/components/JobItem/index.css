@@ -1,0 +1,140 @@
+.job-item-container {
+  list-style: none;
+  background-color: #202020;
+  width: 700px;
+  padding: 20px;
+  border-radius: 15px;
+  color: #f1f5f9;
+  margin: 10px;
+}
+@media screen and (max-width: 767px) {
+  .job-item-container {
+    width: 100%;
+  }
+}
+.h-line {
+  width: 650px;
+  color: #f1f5f9;
+}
+@media screen and (max-width: 767px) {
+  .h-line {
+    width: 100%;
+  }
+}
+.description {
+  font-size: 15px;
+  color: #f1f5f9;
+  padding-left: 0px;
+}
+.company-logo {
+  width: 55px;
+  height: 55px;
+}
+.first-part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.title-and-rating-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.title {
+  font-size: 17px;
+  color: #f1f5f9;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+}
+.rating-con {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-left: 10px;
+}
+.rating {
+  font-size: 18px;
+  padding-left: 7px;
+  margin-top: 10px;
+}
+.star-icon {
+  margin-bottom: 8px;
+  padding-top: 0px;
+  color: #fbbf24;
+  font-size: 18px;
+}
+.location-employment-type-and-salary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 700px;
+  height: 50px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.location-employment-type-con {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.location-con {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-right: 0px;
+  margin-right: 0px;
+  width: 100px;
+  height: 100px;
+}
+.employment-con {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-left: 10px;
+}
+.location-type-icon {
+  font-size: 190px;
+  margin: 0;
+  padding-top: 0px;
+}
+@media screen and (max-width: 767px) {
+  .location-type-icon {
+    font-size: 25px;
+  }
+}
+.para {
+  font-size: 15px;
+  padding-left: 0px;
+  margin-left: 10px;
+}
+.salary {
+  font-size: 20px;
+  margin-left: 320px;
+}
+@media screen and (max-width: 767px) {
+  .salary {
+    margin-left: 50px;
+  }
+  .employment-con {
+    margin-left: 0px;
+  }
+}

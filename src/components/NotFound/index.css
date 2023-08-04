@@ -1,0 +1,20 @@
+.not-found-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: black;
+  height: 100vh;
+}
+.not-found-img {
+  width: 400px;
+  height: 350px;
+}
+.not-found-head {
+  font-size: 30px;
+}
+.not-found-para {
+  font-size: 15px;
+}
