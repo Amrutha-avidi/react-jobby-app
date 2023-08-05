@@ -192,9 +192,9 @@ class Jobs extends Component {
           src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png"
           alt="no jobs"
         />
-        <h1 className="no-jobs-head">No jobs found</h1>
+        <h1 className="no-jobs-head">No Jobs Found</h1>
         <p className="no-jobs-para">
-          We could not find any jobs. Try other filters.
+          We could not find any jobs. Try other filters
         </p>
       </div>
     ) : (
@@ -225,7 +225,7 @@ class Jobs extends Component {
       />
       <h1 className="failed-view-head">Oops! Something Went Wrong</h1>
       <p className="failed-view-para">
-        We cannot seem to find the page you are looking for.
+        We cannot seem to find the page you are looking for
       </p>
       <button type="button" onClick={this.retryJobItemDetails}>
         Retry
@@ -329,6 +329,20 @@ class Jobs extends Component {
       <div>
         <Header />
         <div className="job-con">
+          <div className="filters-con">
+            {this.getProfileApiStatus()}
+            <div>
+              <hr />
+            </div>
+            <h1 className="filter-head">Type of Employment</h1>
+            {this.renderEmploymentTypes()}
+            <div>
+              <hr />
+            </div>
+
+            <h1 className="filter-head">Salary Range</h1>
+            {this.renderSalaryRange()}
+          </div>
           <div className="search-job-list-con">
             <div className="search-con">
               <input
@@ -348,23 +362,7 @@ class Jobs extends Component {
                 <BsSearch className="search-icon" />
               </button>
             </div>
-            <div className="job-list-con">{this.getJobApiStatus()}</div>
-          </div>
-          <div className="filters-con">
-            {this.getProfileApiStatus()}
-            <div>
-              <hr />
-            </div>
-            <h1 className="filter-head">Type of Employment</h1>
-            {this.renderEmploymentTypes()}
-            <div>
-              <hr />
-            </div>
-
-            <h1 className="filter-head">Salary Range</h1>
-            {this.renderSalaryRange()}
-
-            <div className="job-list-con-small">{this.getJobApiStatus()}</div>
+            {this.getJobApiStatus()}
           </div>
         </div>
       </div>

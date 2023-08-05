@@ -22,7 +22,7 @@ const Header = props => {
             alt="website logo"
           />
         </Link>
-        <ul>
+        <ul className="item-list">
           <li className="item">
             <Link to="/">
               <button type="button" className="icon-button">
@@ -52,7 +52,7 @@ const Header = props => {
           />
         </Link>
         <ul className="header-links-con">
-          <li className="item">
+          <li className="large-item">
             <Link
               className="header-links"
               style={{textDecoration: 'none'}}
@@ -61,7 +61,7 @@ const Header = props => {
               Home
             </Link>
           </li>
-          <li className="item">
+          <li className="large-item">
             <Link
               className="header-links"
               style={{textDecoration: 'none'}}

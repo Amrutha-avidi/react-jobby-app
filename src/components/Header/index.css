@@ -1,6 +1,7 @@
 .header-con {
   height: 10vh;
   background-color: #272727;
+  width: 100%;
 }
 .small-logo-img {
   width: 80px;
@@ -14,8 +15,20 @@
     justify-content: center;
   }
 }
+.item-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50px;
+  height: 70px;
+  padding-right: 0px;
+  margin-left: 80px;
+}
 .item {
   list-style: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
 }
 .large-logo-img {
   width: 150px;
@@ -49,10 +62,12 @@
 .small {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 0px;
+  height: 10vh;
+  width: 100vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -71,4 +86,7 @@
 .logout-button {
   background-color: #6366f1;
   width: 110px;
+}
+.large-item {
+  width: 70px;
 }

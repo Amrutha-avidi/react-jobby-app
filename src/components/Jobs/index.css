@@ -12,6 +12,7 @@
     justify-content: center;
     padding-left: 40px;
     padding-right: 40px;
+    flex-grow: 1;
   }
 }
 
@@ -48,11 +49,7 @@
   align-self: flex-start;
   margin: 5px;
 }
-@media screen and (min-width: 768px) {
-  .search-con {
-    order: 1;
-  }
-}
+
 @media screen and (min-width: 768px) {
   hr {
     width: 350px;

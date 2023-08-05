@@ -6,10 +6,11 @@
   border-radius: 15px;
   color: #f1f5f9;
   margin: 10px;
+  margin-right: 0px;
 }
 @media screen and (max-width: 767px) {
   .job-item-container {
-    width: 100%;
+    width: 95%;
   }
 }
 .h-line {

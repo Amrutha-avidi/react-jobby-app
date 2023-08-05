@@ -46,6 +46,12 @@
   padding: 30px;
   color: #f1f5f9;
   width: 97%;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .details-con {
+    width: 320px;
+  }
 }
 .company-logo {
   width: 70px;
@@ -105,11 +111,36 @@
 .emp-icon {
   font-size: 400px;
 }
-
 .paragraph {
   font-size: 17px;
   padding-left: 7px;
 }
+@media screen and (max-width: 768px) {
+  .location-employment-con {
+    width: 170px;
+  }
+  .location-container {
+    width: 100px;
+    margin-right: 10px;
+  }
+  .location-type-icon {
+    font-size: 200px;
+    height: 25px;
+    width: 25px;
+  }
+  .employment-container {
+    width: 100px;
+  }
+  .emp-icon {
+    font-size: 200px;
+    height: 25px;
+    width: 25px;
+  }
+  .paragraph {
+    font-size: 15px;
+  }
+}
+
 .h-line {
   width: 100%;
 }
@@ -184,6 +215,18 @@
   margin-left: 0px;
   padding-left: 0px;
   width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .company-life-description {
+    flex-direction: column;
+  }
+  .company-description {
+    font-size: 15px;
+    width: 100%;
+  }
+  .company-life-img {
+    width: 100%;
+  }
 }
 .similar {
   color: #f1f5f9;
