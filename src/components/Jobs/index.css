@@ -9,7 +9,7 @@
   .job-con {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-left: 40px;
     padding-right: 40px;
     flex-grow: 1;
@@ -81,6 +81,7 @@
   display: flex;
   flex-direction: column;
   width: 350px;
+  margin-left: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -88,6 +89,15 @@
     order: -1;
     width: 30vw;
     padding: 10px;
+    margin-top: 130px;
+    position: fixed;
+    left: 80px;
+    overflow-y: scroll;
+    top: 0;
+    bottom: 0;
+  }
+  .filters-con::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -176,10 +186,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 130px;
 }
 @media screen and (min-width: 768px) {
   .search-con {
     order: -1;
+  }
+  .search-job-list-con {
+    margin-left: 130px;
   }
 }
 .job-list-container {

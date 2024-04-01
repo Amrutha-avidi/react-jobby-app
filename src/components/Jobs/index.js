@@ -25,6 +25,28 @@ const employmentTypesList = [
     employmentTypeId: 'INTERNSHIP',
   },
 ]
+const locationPreferencesList = [
+  {
+    name: 'Hyderabad',
+    locationId: 'Hyderabad',
+  },
+  {
+    name: 'Chennai',
+    locationId: 'Chennai',
+  },
+  {
+    name: 'Bangalore',
+    locationId: 'Bangalore',
+  },
+  {
+    name: 'Delhi',
+    locationId: 'Delhi',
+  },
+  {
+    name: 'Mumbai',
+    locationId: 'Mumbai',
+  },
+]
 
 const salaryRangesList = [
   {
@@ -64,6 +86,7 @@ class Jobs extends Component {
     profileDetails: [],
     jobList: [],
     employmentTypeInputs: [],
+    locations: [],
     salaryInput: '',
     profileApiStatus: apiStatusConstantsForProfile.initial,
     jobsApiStatus: apiStatusConstantsForJobs.initial,
@@ -150,7 +173,7 @@ class Jobs extends Component {
   getJobs = async () => {
     this.setState({jobsApiStatus: apiStatusConstantsForJobs.inProgress})
     const jwtToken = Cookies.get('jwt_token')
-    const {search, employmentTypeInputs, salaryInput} = this.state
+    const {search, employmentTypeInputs, salaryInput, locations} = this.state
     const jobUrl = `https://apis.ccbp.in/jobs?employment_type=${employmentTypeInputs}&minimum_package=${salaryInput}&search=${search}`
     const jobOptions = {
       headers: {
@@ -172,10 +195,22 @@ class Jobs extends Component {
         title: eachJob.title,
       }))
 
-      this.setState({
-        jobsApiStatus: apiStatusConstantsForJobs.success,
-        jobList: formattedJobData,
-      })
+      if (locations.length !== 0) {
+        const newFormattedData = formattedJobData.filter(object =>
+          locations.includes(object.location),
+        )
+
+        this.setState({
+          jobsApiStatus: apiStatusConstantsForJobs.success,
+
+          jobList: newFormattedData,
+        })
+      } else {
+        this.setState({
+          jobsApiStatus: apiStatusConstantsForJobs.success,
+          jobList: formattedJobData,
+        })
+      }
     } else {
       this.setState({jobsApiStatus: apiStatusConstantsForJobs.failure})
     }
@@ -183,6 +218,7 @@ class Jobs extends Component {
 
   getJobsView = () => {
     const {jobList} = this.state
+    console.log(jobList)
     const noJobs = jobList.length === 0
 
     return noJobs ? (
@@ -292,6 +328,44 @@ class Jobs extends Component {
     </ul>
   )
 
+  onGetLocationPreference = event => {
+    const {locations} = this.state
+
+    const locationsNotInList = locations.filter(
+      eachType => eachType === event.target.id,
+    )
+    if (locationsNotInList.length === 0) {
+      this.setState(
+        prevState => ({
+          locations: [...prevState.locations, event.target.id],
+        }),
+        this.getJobs,
+      )
+    } else {
+      const filteredData = locations.filter(
+        eachType => eachType !== event.target.id,
+      )
+      this.setState({locations: filteredData}, this.getJobs)
+    }
+  }
+
+  renderLocations = () => (
+    <ul className="filter-list">
+      {locationPreferencesList.map(eachType => (
+        <li className="filter-label" key={eachType.locationId}>
+          <label>
+            <input
+              type="checkbox"
+              id={eachType.locationId}
+              onChange={this.onGetLocationPreference}
+            />
+            {eachType.name}
+          </label>
+        </li>
+      ))}
+    </ul>
+  )
+
   renderSalaryRange = () => (
     <ul className="filter-list">
       {salaryRangesList.map(eachRange => (
@@ -342,6 +416,11 @@ class Jobs extends Component {
 
             <h1 className="filter-head">Salary Range</h1>
             {this.renderSalaryRange()}
+            <div>
+              <hr />
+            </div>
+            <h1 className="filter-head">Location Preference</h1>
+            {this.renderLocations()}
           </div>
           <div className="search-job-list-con">
             <div className="search-con">

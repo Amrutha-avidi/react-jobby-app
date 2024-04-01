@@ -9,6 +9,7 @@
 @media screen and (min-width: 768px) {
   .home-con {
     background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+    margin-top: 100px;
   }
   h1 {
     font-size: 65px;
